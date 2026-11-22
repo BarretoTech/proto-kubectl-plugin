@@ -29,6 +29,8 @@ jobs:
       - name: Install and run pinned and latest tool versions
         shell: pwsh
         env:
+          PROTO_REPORTER: text
+          PROTO_CONFIG_MODE: local
           TOOL: kubectl
           PINNED_VERSION: "1.37.2"
           GITHUB_TOKEN: ${{ github.token }}

@@ -8,30 +8,27 @@ repository-url = "https://github.com/kubernetes/kubernetes"
 
 [platform.linux]
 archs = ["x64", "arm64"]
-download-file = "kubectl"
-checksum-file = "kubectl.sha256"
+download-file = "linux/{arch}/kubectl"
+checksum-file = "linux/{arch}/kubectl.sha256"
 
 [platform.macos]
 archs = ["x64", "arm64"]
-download-file = "kubectl"
-checksum-file = "kubectl.sha256"
+download-file = "darwin/{arch}/kubectl"
+checksum-file = "darwin/{arch}/kubectl.sha256"
 
 [platform.windows]
 archs = ["x64", "arm64"]
-download-file = "kubectl.exe"
-checksum-file = "kubectl.exe.sha256"
+download-file = "windows/{arch}/kubectl.exe"
+checksum-file = "windows/{arch}/kubectl.exe.sha256"
 
 [install]
-download-url = "https://dl.k8s.io/release/v{version}/bin/{os}/{arch}/{download_file}"
-checksum-url = "https://dl.k8s.io/release/v{version}/bin/{os}/{arch}/{checksum_file}"
+download-url = "https://dl.k8s.io/release/v{version}/bin/{download_file}"
+checksum-url = "https://dl.k8s.io/release/v{version}/bin/{checksum_file}"
 unpack = false
 
 [install.arch]
 x86_64 = "amd64"
 aarch64 = "arm64"
-
-[install.os]
-macos = "darwin"
 
 [resolve]
 git-url = "https://github.com/kubernetes/kubernetes"
