@@ -17,7 +17,7 @@ Run `proto install kubectl`, then `kubectl version --client`.
 
 ## Supported platforms
 
-Linux, macOS, and Windows support x64 and arm64. The plugin downloads official binaries from `dl.k8s.io` and verifies each download against its published SHA-256 checksum. CI runs fresh installations on Linux x64 and arm64, macOS x64 and arm64, and Windows x64 with Proto 0.63.2.
+The manifest supports Linux, macOS, and Windows x64 and arm64 binaries. Proto currently distributes its Windows CLI for x64. The plugin downloads official binaries from `dl.k8s.io` and verifies each download against its published SHA-256 checksum. CI runs fresh installations on Linux x64 and arm64, macOS x64 and arm64, and Windows x64 with Proto 0.63.2.
 
 ## Development
 
